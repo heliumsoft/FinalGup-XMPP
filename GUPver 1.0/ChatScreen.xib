@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChatScreen">
+            <connections>
+                <outlet property="accessoryTab" destination="a2P-Iw-vRy" id="rA4-1T-EY2"/>
+                <outlet property="accessoryView" destination="9xD-h9-SMz" id="Ycd-JP-A7K"/>
+                <outlet property="camera" destination="fN0-VW-tbH" id="Pcg-nM-9Yg"/>
+                <outlet property="chatTable" destination="uBX-eo-EDw" id="ydc-zW-ILV"/>
+                <outlet property="date" destination="Uah-HD-9aZ" id="tpo-g1-aVJ"/>
+                <outlet property="gallery" destination="KB9-Sq-rwT" id="QTM-4g-2m0"/>
+                <outlet property="indecater" destination="NXT-EV-4mN" id="eun-eh-Psc"/>
+                <outlet property="indecaterView" destination="Up5-sJ-gQ7" id="EYj-eO-McE"/>
+                <outlet property="mainScroll" destination="JcC-uZ-SuV" id="8Gm-G0-kTM"/>
+                <outlet property="messageField" destination="Yzi-0f-BhF" id="p8b-Xb-c1T"/>
+                <outlet property="record" destination="qds-3f-oE8" id="Dzu-ty-jJC"/>
+                <outlet property="sendButton" destination="SZ4-4B-H6I" id="bhS-Vo-0HW"/>
+                <outlet property="tabBarView" destination="H3s-3x-w1g" id="gWC-Da-DdZ"/>
+                <outlet property="vcard" destination="dUF-sG-1rs" id="oNi-k5-jFO"/>
+                <outlet property="view" destination="1" id="3"/>
+                <outlet property="waitLbl" destination="146-ac-J2X" id="Oj4-jQ-oRb"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="JcC-uZ-SuV">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <subviews>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Uah-HD-9aZ">
+                            <rect key="frame" x="98" y="6" width="128" height="16"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" id="9xD-h9-SMz">
+                            <rect key="frame" x="0.0" y="426" width="320" height="54"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="SZ4-4B-H6I">
+                                    <rect key="frame" x="273" y="5" width="47" height="45"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <state key="normal" title="Send">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <state key="highlighted">
+                                        <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="sendMessage" destination="-1" eventType="touchUpInside" id="GcK-nv-Bwg"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="wYQ-cs-Toa">
+                                    <rect key="frame" x="3" y="12" width="30" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" image="chatAccessory.png">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="showAccessoryView:" destination="-1" eventType="touchUpInside" id="Vhu-gv-jpW"/>
+                                    </connections>
+                                </button>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" id="Yzi-0f-BhF">
+                                    <rect key="frame" x="41" y="12" width="233" height="32"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="bor-D3-5Kf"/>
+                                    </connections>
+                                </textView>
+                                <view alpha="0.64999999999999969" contentMode="scaleToFill" id="Up5-sJ-gQ7">
+                                    <rect key="frame" x="0.0" y="3" width="320" height="49"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="146-ac-J2X">
+                                            <rect key="frame" x="135" y="16" width="115" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="Please wait....">
+                                                    <attributes>
+                                                        <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <font key="NSFont" size="17" name="HelveticaNeue"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                            <color key="shadowColor" red="0.25496889510264859" green="0.16877589177517405" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                        <activityIndicatorView autoresizesSubviews="NO" opaque="NO" alpha="0.49999999999999961" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" id="NXT-EV-4mN">
+                                            <rect key="frame" x="107" y="16" width="20" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        </activityIndicatorView>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.60784316059999999" green="0.83921575550000005" blue="0.98823535439999999" alpha="1" colorSpace="deviceRGB"/>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" red="0.60784316062927246" green="0.83921575546264648" blue="0.98823535442352295" alpha="1" colorSpace="deviceRGB"/>
+                        </view>
+                        <tableView autoresizesSubviews="NO" clipsSubviews="YES" contentMode="bottom" alwaysBounceVertical="YES" style="grouped" separatorStyle="none" allowsSelection="NO" allowsSelectionDuringEditing="YES" allowsMultipleSelectionDuringEditing="YES" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="uBX-eo-EDw">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="426"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
+                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <color key="sectionIndexColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="exc-8f-xWi"/>
+                                <outlet property="delegate" destination="-1" id="kC8-RS-DWb"/>
+                            </connections>
+                        </tableView>
+                        <view contentMode="scaleToFill" id="H3s-3x-w1g">
+                            <rect key="frame" x="0.0" y="377" width="320" height="49"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <tabBar contentMode="scaleToFill" id="a2P-Iw-vRy">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                    <items>
+                                        <tabBarItem title="Recording" id="qds-3f-oE8">
+                                            <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-4"/>
+                                        </tabBarItem>
+                                        <tabBarItem tag="1" title="Camera" id="fN0-VW-tbH">
+                                            <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-4"/>
+                                        </tabBarItem>
+                                        <tabBarItem tag="2" title="Gallery" id="KB9-Sq-rwT">
+                                            <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-4"/>
+                                        </tabBarItem>
+                                        <tabBarItem tag="3" title="Contact" id="dUF-sG-1rs">
+                                            <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-4"/>
+                                        </tabBarItem>
+                                    </items>
+                                    <color key="tintColor" red="1" green="0.039494716639999997" blue="0.69250431599999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </tabBar>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="chatAccessory.png" width="30" height="30"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
